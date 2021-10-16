@@ -23,13 +23,20 @@ code {
 .frame {
   align-items: center;
   justify-content: center;
-  border: solid 1px #ddd;
+  border: solid 1px grey;
   background: #f0f0f0;
 }
 
 .plot {
-  height: 100%;
-  width: 100%;
-  margin-top: -2rem;
-  z-index: 1;
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  z-index: -1;
+}
+
+.drag-handle {
+  background-color: grey;
+  padding-bottom: 2rem;
+  z-index: 10;
+  width: inherit;
 }
