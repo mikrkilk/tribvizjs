@@ -6,7 +6,6 @@ export const DraggableFrame =  forwardRef(({style, className, children, frame, .
     return(
     <div style={style} className={["frame",className].join(' ')} ref={ref} {...rest}>
         
-            
             <PlotFrame plot={frame.plot}/>
             {children}
             <div className="drag-handle"/>

@@ -1,10 +1,11 @@
 import {React, memo} from 'react'
 
 
-export const PlotFrame = ({plot}) => (
+export const PlotFrame = ({plot}) => {
+  return(
   <div className="plot">
-    {plot}
-  </div>);
+    {plot.plot}
+  </div>)};
 
 
 export default memo(PlotFrame);
