@@ -7,7 +7,7 @@ const AddFrameButton = () => {
 
     const addFrame = (event) => {
         event.preventDefault()
-        dispatch(createFrame("Hello"))
+        dispatch(createFrame())
     }
 
     return(

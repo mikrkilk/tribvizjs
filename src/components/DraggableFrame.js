@@ -1,5 +1,6 @@
 import React, { forwardRef }from "react";
 import { PlotFrame } from './PlotFrame';
+import RemoveFrameX from "./RemoveFrameX";
 
 
 export const DraggableFrame =  forwardRef(({style, className, children, frame, ...rest}, ref) => {
@@ -8,7 +9,9 @@ export const DraggableFrame =  forwardRef(({style, className, children, frame, .
         
             <PlotFrame plot={frame.plot}/>
             {children}
-            <div className="drag-handle"/>
+            <div className="drag-handle"> 
+                <RemoveFrameX id={frame.id} />
+            </div>
     </div>)})
 
 export default DraggableFrame

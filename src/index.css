@@ -40,3 +40,9 @@ code {
   z-index: 10;
   width: inherit;
 }
+
+.removerX {
+  float: right;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
