@@ -5,6 +5,7 @@ import PlotCanvas from './components/PlotCanvas'
 import AddFrameButton from './components/AddFrameButton'
 import exdata from './data/example.js'
 import BarPlot from './components/plots/BarPlot'
+import FrameSetup from './components/FrameSetup';
 
 const App = () => {
   //const [frames, setFrames] = useState([
@@ -13,7 +14,11 @@ const App = () => {
   return (
     <div className="App">
       <AddFrameButton />
-        <PlotCanvas />
+        <div className="botApp">
+          <FrameSetup />
+          <PlotCanvas />
+          
+        </div>
 
     </div>
   );

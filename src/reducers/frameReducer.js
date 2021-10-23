@@ -7,10 +7,7 @@ const frameReducer = (state = [], action) => {
         return [...state, action.data]
       case 'REMOVE_FRAME':
         const id = action.data.id
-        const frameToDel = state.findIndex(f=>f.id === id)
-        let newState = state.slice()
-        newState.splice(frameToDel,1)
-        return newState
+        return state.filter(frame => frame.id !== id)
       default:
       return state
     }
@@ -28,7 +25,10 @@ export const createFrame = (plot=[]) => {
         w:30,
         h:30,
       },
-      plot:{plot}
+      plot:{
+        plot:plot,
+        id:id
+      }
     }
   }
 }

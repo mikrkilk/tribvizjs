@@ -34,6 +34,19 @@ code {
   z-index: -1;
 }
 
+.emptyplot {
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  z-index: -1;
+  background-color: hotpink;
+}
+
+.emptytext {
+  position: relative;
+  top: 50%;
+}
+
 .drag-handle {
   background-color: grey;
   padding-bottom: 2rem;
@@ -45,4 +58,30 @@ code {
   float: right;
   margin-right: 0.5rem;
   cursor: pointer;
+}
+
+.openSetupCog {
+  float: left;
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+}
+.botApp {
+  display: flex;
+  flex-direction: row;
+}
+
+.setup {
+  width: 20rem;
+  height: 75rem;
+  border: 1px solid black;
+  z-index: 10;
+  background-color: darkslategray;
+  transition: width 1s ease;
+}
+
+.closedSetup {
+  transition: width 1s ease;
+  width: 0rem;
+  
 }
