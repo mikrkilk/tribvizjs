@@ -78,10 +78,20 @@ code {
   z-index: 10;
   background-color: darkslategray;
   transition: width 1s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .closedSetup {
   transition: width 1s ease;
   width: 0rem;
   
+}
+
+.preview {
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+  left: 12.5%;
+  transition: width 1s ease;
 }

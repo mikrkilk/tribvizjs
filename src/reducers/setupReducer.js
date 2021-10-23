@@ -1,6 +1,8 @@
 
 const initialState = {
-    open:true
+    open:false,
+    data:{
+    }
 }
 
 const setupReducer = (state = initialState, action) => {
@@ -8,7 +10,8 @@ const setupReducer = (state = initialState, action) => {
       case 'OPEN_SETUP':
           console.log("Opening setup")
         return {
-            open:true
+            open:true,
+            data:action.data
         }
       case 'CLOSE_SETUP':
         return {
@@ -23,7 +26,6 @@ export const openSetup = (plotID) => {
   return {
     type: 'OPEN_SETUP',
     data: {
-        open:true,
         id:plotID,
     }
   }
@@ -32,7 +34,7 @@ export const openSetup = (plotID) => {
 export const closeSetup = () => {
   return {
     type: 'CLOSE_SETUP',
-    data: {open:false}
+    data: {}
   }
 }
 
